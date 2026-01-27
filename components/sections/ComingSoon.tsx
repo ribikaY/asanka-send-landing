@@ -1,6 +1,6 @@
 "use client";
 
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter, DialogClose } from "@/components/ui/dialog";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { ReactNode } from "react";
@@ -23,7 +23,9 @@ export function ComingSoonContent() {
                 className="mx-auto md:mt-3"
             />
             <DialogFooter className="flex justify-center sm:justify-center mt-2 md:mt-3">
-                <Button className="rounded-full bg-asanka-secondary hover:bg-asanka-secondary/90 font-normal py-6 md:py-7 w-full sm:w-[300px]">Join the waitlist</Button>
+                <DialogClose asChild>
+                    <Button className="rounded-full bg-asanka-secondary hover:bg-asanka-secondary/90 font-normal py-6 md:py-7 w-full sm:w-[300px]">Join the waitlist</Button>
+                </DialogClose>
             </DialogFooter>
         </DialogContent>
     )
