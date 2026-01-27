@@ -71,9 +71,9 @@ const phoneVariants = {
 
 const getBubbleVariants = (index: number) => {
     const directions = [
-        { x: -60, y: -40 },
-        { x: 60, y: -20 },
-        { x: -40, y: 40 },
+        { x: -60, y: -40, rotate: -15 },
+        { x: 60, y: -20, rotate: 12 },
+        { x: -40, y: 40, rotate: -8 },
     ];
 
     return {
@@ -81,19 +81,31 @@ const getBubbleVariants = (index: number) => {
             opacity: 0,
             x: directions[index].x,
             y: directions[index].y,
-            scale: 0.5,
+            scale: 0.3,
+            rotate: directions[index].rotate,
         },
         visible: {
             opacity: 1,
             x: 0,
             y: 0,
             scale: 1,
+            rotate: 0,
             transition: {
-                duration: 0.7,
+                duration: 0.9,
                 delay: 0.8 + (index * 0.15),
                 type: "spring" as const,
-                stiffness: 150,
-                damping: 18,
+                stiffness: 200,
+                damping: 15,
+                scale: {
+                    type: "spring" as const,
+                    stiffness: 250,
+                    damping: 12,
+                },
+                rotate: {
+                    type: "spring" as const,
+                    stiffness: 180,
+                    damping: 20,
+                },
             },
         },
     };
@@ -198,6 +210,7 @@ function Hero() {
                                 x: 0,
                                 y: [0, -8, 0],
                                 scale: 1,
+                                rotate: 0,
                             } : "hidden"}
                             style={{ willChange: 'transform' }}
                             suppressHydrationWarning
@@ -219,6 +232,13 @@ function Hero() {
                                     type: "spring" as const,
                                     stiffness: 150,
                                     damping: 18,
+                                },
+                                rotate: {
+                                    duration: 0.9,
+                                    delay: 0.8,
+                                    type: "spring" as const,
+                                    stiffness: 180,
+                                    damping: 20,
                                 },
                                 y: {
                                     duration: 2.5,
@@ -240,6 +260,7 @@ function Hero() {
                                 x: 0,
                                 y: [0, -10, 0],
                                 scale: 1,
+                                rotate: 0,
                             } : "hidden"}
                             style={{ willChange: 'transform' }}
                             suppressHydrationWarning
@@ -261,6 +282,13 @@ function Hero() {
                                     type: "spring" as const,
                                     stiffness: 150,
                                     damping: 18,
+                                },
+                                rotate: {
+                                    duration: 0.9,
+                                    delay: 0.95,
+                                    type: "spring" as const,
+                                    stiffness: 180,
+                                    damping: 20,
                                 },
                                 y: {
                                     duration: 2.8,
@@ -282,6 +310,7 @@ function Hero() {
                                 x: 0,
                                 y: [0, -7, 0],
                                 scale: 1,
+                                rotate: 0,
                             } : "hidden"}
                             style={{ willChange: 'transform' }}
                             suppressHydrationWarning
@@ -303,6 +332,13 @@ function Hero() {
                                     type: "spring" as const,
                                     stiffness: 150,
                                     damping: 18,
+                                },
+                                rotate: {
+                                    duration: 0.9,
+                                    delay: 1.1,
+                                    type: "spring" as const,
+                                    stiffness: 180,
+                                    damping: 20,
                                 },
                                 y: {
                                     duration: 2.3,
