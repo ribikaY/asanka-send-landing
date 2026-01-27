@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Smartphone } from "lucide-react";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Link from "next/link";
+import { handleDownloadClick } from "@/lib/utils";
 
 interface Language {
     code: string;
@@ -38,7 +39,7 @@ function Header() {
                         asChild
                         className="lg:ml-6 rounded-full bg-asanka-secondary hover:bg-asanka-secondary/90 font-light py-5 z-10"
                     >
-                        <Link href="#how-it-works">
+                        <Link href="#how-it-works" onClick={handleDownloadClick}>
                             Download
                             <Smartphone size={16} />
                         </Link>

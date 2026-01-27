@@ -83,8 +83,19 @@ function Footer() {
           </div>
         </div>
 
+        <div className="relative w-full max-w-[1357px] mx-auto aspect-[1357/259] mt-6 sm:hidden">
+          <Image
+            src="/images/logo/logo-illustration.svg"
+            alt="Asanka Send Logo"
+            fill
+            priority={true}
+            blurDataURL="/images/logo/logo-illustration.svg"
+            className="object-contain"
+          />
+        </div>
+        
         <motion.div
-          className="relative w-full max-w-[1357px] mx-auto aspect-[1357/259]"
+          className="hidden sm:block relative w-full max-w-[1357px] mx-auto aspect-[1357/259] mt-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}

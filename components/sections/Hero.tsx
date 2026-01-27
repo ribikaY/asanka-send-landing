@@ -7,6 +7,7 @@ import { ArrowDown, Download } from "lucide-react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
+import { handleDownloadClick } from "@/lib/utils";
 
 const textContainerVariants = {
     hidden: { opacity: 0 },
@@ -152,7 +153,7 @@ function Hero() {
                             asChild
                             className="rounded-full bg-asanka-secondary hover:bg-asanka-secondary/90 font-light py-7 z-10 md:mb-16 md:mt-5 w-full md:w-auto"
                         >
-                            <Link href="#how-it-works">
+                            <Link href="#how-it-works" onClick={handleDownloadClick}>
                                 <span className="ml-6"> Download the app</span>
                                 <Download size={16} className="mr-6" />
                             </Link>

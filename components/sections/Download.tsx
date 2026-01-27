@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { handleDownloadClick } from "@/lib/utils";
 
 const textContainerVariants = {
   hidden: { opacity: 0 },
@@ -92,7 +93,7 @@ function Download() {
             asChild
             className="rounded-full bg-asanka-primary hover:bg-asanka-primary/90 font-normal py-6"
           >
-            <Link href="#how-it-works">
+            <Link href="#how-it-works" onClick={handleDownloadClick}>
               <span className="ml-6"> Download the App</span>
               <ArrowRight size={16} className="mr-6" />
             </Link>
