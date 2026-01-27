@@ -9,7 +9,7 @@ import WhyUs from "@/components/sections/WhyUs";
 
 export default function Home() {
   return (
-    <main className="font-sans">
+    <main className="font-sans overflow-hidden md:overflow-visible">
         <Hero />
         <WhyUs />
         <Features />
