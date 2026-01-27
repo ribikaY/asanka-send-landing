@@ -16,11 +16,13 @@ export function ComingSoonContent() {
                 </DialogDescription>
             </DialogHeader>
             <Image
-                src="/images/mock-ups/coming-soon.png"
+                src="/images/mock-ups/coming-soon.webp"
                 alt="Coming Soon"
                 width={290}
                 height={309}
                 className="mx-auto md:mt-3"
+                priority={true}
+                blurDataURL="/images/mock-ups/coming-soon.webp"
             />
             <DialogFooter className="flex justify-center sm:justify-center mt-2 md:mt-3">
                 <DialogClose asChild>

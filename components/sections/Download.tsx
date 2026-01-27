@@ -110,11 +110,11 @@ function Download() {
         variants={imageVariants}
       >
         <Image
-          src="/images/mock-ups/app-transaction.png"
+          src="/images/mock-ups/app-transaction.webp"
           alt="Features Illustration"
           fill
           priority={true}
-          blurDataURL="/images/mock-ups/app-transaction.png"
+          blurDataURL="/images/mock-ups/app-transaction.webp"
           className="object-contain"
         />
       </motion.div>

@@ -135,11 +135,11 @@ function HowItWorks() {
           variants={imageVariants}
         >
           <Image
-            src="/images/mock-ups/app-icon.png"
+            src="/images/mock-ups/app-icon.webp"
             alt="app icon"
             fill
             priority={true}
-            blurDataURL="/images/mock-ups/app-icon.png"
+            blurDataURL="/images/mock-ups/app-icon.webp"
             className="object-contain"
           />
         </motion.div>

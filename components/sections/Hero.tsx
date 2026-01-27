@@ -185,6 +185,8 @@ function Hero() {
                             width={644}
                             height={644}
                             className="w-full h-full object-contain"
+                            priority={true}
+                            blurDataURL="/images/mock-ups/hero-mockup.webp"
                         />
 
                         <motion.div
