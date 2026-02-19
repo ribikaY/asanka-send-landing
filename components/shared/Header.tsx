@@ -6,6 +6,7 @@ import { Smartphone } from "lucide-react";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Link from "next/link";
 import { handleDownloadClick } from "@/lib/utils";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 interface Language {
     code: string;
@@ -21,14 +22,30 @@ function Header() {
 
     return (
         <div className="py-3 md:py-5">
+            {/* Mobile Header */}
+            <div className="container flex md:hidden justify-between items-center">
+                <Image
+                    src="/images/logo/logo-icon.webp"
+                    alt="Asanka Send Logo"
+                    width={35}
+                    height={35}
+                    className="z-10 mt-1"
+                    priority={true}
+                    blurDataURL="/images/logo/logo-icon.webp"
+                />
+                <ThemeSwitcher />
+            </div>
+
+            {/* Desktop Header */}
             <div className="container hidden md:flex justify-between items-center">
                 <Image
                     src="/images/logo/logo.svg"
                     alt="Asanka Send Logo"
                     width={176}
                     height={50}
-                    className="z-10"
+                    className="z-10 hidden md:block"
                 />
+            
                 <div className="flex items-center gap-4">
                     <nav className="hidden md:flex gap-6 text-foreground/70 z-10 relative">
                         <Link href="#about" className="hover:text-foreground/90 transition relative z-10">About</Link>
@@ -67,6 +84,7 @@ function Header() {
                             </SelectGroup>
                         </SelectContent>
                     </Select>
+                    <ThemeSwitcher />
                 </div>
             </div>
         </div>

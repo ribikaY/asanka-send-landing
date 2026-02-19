@@ -120,7 +120,7 @@ function HowItWorks() {
           How It Works <span className="font-sans font-bold">(</span>Simple and Fast<span className="font-sans font-bold">)</span>
         </motion.h1>
         <motion.p
-          className="text-muted-foreground/80 leading-relaxed max-w-xl lg:mx-auto text-[15px] md:text-base"
+          className="text-muted-foreground/80 dark:text-foreground/60 leading-relaxed max-w-xl lg:mx-auto text-[15px] md:text-base"
           variants={headerItemVariants}
         >
           We adhere to the highest standards of quality in all our products and services. From design and development to manufacturing.
@@ -156,14 +156,14 @@ function HowItWorks() {
             variants={stepItemVariants}
           >
             <motion.div
-              className="rounded-md bg-asanka-primary w-14 h-14 flex items-center justify-center flex-shrink-0"
+              className="rounded-md bg-asanka-primary dark:bg-asanka-primary/10 dark:border dark:border-asanka-accent-muted/15 w-14 h-14 flex items-center justify-center flex-shrink-0"
               variants={iconVariants}
             >
-              <Download size={23} className="text-white" />
+              <Download size={23} className="text-white dark:text-asanka-accent" />
             </motion.div>
             <div className="space-y-1 md:space-y-1.5">
-              <h3 className="text-lg lg:text-xl font-semibold">Download the App</h3>
-              <p className="text-muted-foreground/80 text-[15px] lg:text-base">Create an account and complete verification.</p>
+              <h3 className="text-lg lg:text-xl font-semibold dark:text-foreground/90">Download the App</h3>
+              <p className="text-muted-foreground/80 dark:text-foreground/55 text-[15px] lg:text-base">Create an account and complete verification.</p>
             </div>
           </motion.div>
 
@@ -172,14 +172,14 @@ function HowItWorks() {
             variants={stepItemVariants}
           >
             <motion.div
-              className="rounded-md bg-asanka-primary w-14 h-14 flex items-center justify-center flex-shrink-0"
+              className="rounded-md bg-asanka-primary dark:bg-asanka-primary/10 dark:border dark:border-asanka-accent-muted/15 w-14 h-14 flex items-center justify-center flex-shrink-0"
               variants={iconVariants}
             >
-              <CreditCard size={23} className="text-white" />
+              <CreditCard size={23} className="text-white dark:text-asanka-accent" />
             </motion.div>
             <div className="space-y-1 md:space-y-1.5">
-              <h3 className="text-lg lg:text-xl font-semibold">Add a payment method</h3>
-              <p className="text-muted-foreground/80 text-[15px] lg:text-base">Use your card or bank transfer depending on your country.</p>
+              <h3 className="text-lg lg:text-xl font-semibold dark:text-foreground/90">Add a payment method</h3>
+              <p className="text-muted-foreground/80 dark:text-foreground/55 text-[15px] lg:text-base">Use your card or bank transfer depending on your country.</p>
             </div>
           </motion.div>
 
@@ -188,14 +188,14 @@ function HowItWorks() {
             variants={stepItemVariants}
           >
             <motion.div
-              className="rounded-md bg-asanka-primary w-14 h-14 flex items-center justify-center flex-shrink-0"
+              className="rounded-md bg-asanka-primary dark:bg-asanka-primary/10 dark:border dark:border-asanka-accent-muted/15 w-14 h-14 flex items-center justify-center flex-shrink-0"
               variants={iconVariants}
             >
-              <CopyCheck size={23} className="text-white" />
+              <CopyCheck size={23} className="text-white dark:text-asanka-accent" />
             </motion.div>
             <div className="space-y-1 md:space-y-1.5">
-              <h3 className="text-lg lg:text-xl font-semibold">Choose what you want to do</h3>
-              <p className="text-muted-foreground/80 text-[15px] lg:text-base">Send money, pay a bill, save, or invest.</p>
+              <h3 className="text-lg lg:text-xl font-semibold dark:text-foreground/90">Choose what you want to do</h3>
+              <p className="text-muted-foreground/80 dark:text-foreground/55 text-[15px] lg:text-base">Send money, pay a bill, save, or invest.</p>
             </div>
           </motion.div>
 
@@ -206,12 +206,12 @@ function HowItWorks() {
             viewport={{ once: true, margin: "-50px" }}
             variants={ctaVariants}
           >
-            <h3 className="text-lg lg:text-xl font-semibold">That&apos;s it. No complexity. No back and forth.</h3>
+            <h3 className="text-lg lg:text-xl font-semibold dark:text-foreground/90">That&apos;s it. No complexity. No back and forth.</h3>
 
             <Dialog>
               <div className="flex gap-2 md:gap-4">
                 <DialogTrigger asChild>
-                  <Button className="space-x-0.5 px-3 md:px-4 h-16">
+                  <Button className="space-x-0.5 px-3 md:px-4 h-16 dark:bg-asanka-accent-muted/20 dark:text-asanka-accent dark:border dark:border-asanka-accent-muted/30 dark:hover:bg-asanka-accent-muted/30 dark:hover:border-asanka-accent-muted/40">
                     <Image
                       src="/images/icons/playstore.svg"
                       alt="Play Store"
@@ -229,13 +229,20 @@ function HowItWorks() {
                 </DialogTrigger>
 
                 <DialogTrigger asChild>
-                  <Button variant="ghost" className="space-x-0.5 px-4 h-16">
+                  <Button variant="ghost" className="space-x-0.5 px-4 h-16 dark:text-foreground/60 dark:hover:text-foreground/80 dark:hover:bg-transparent">
                     <Image
-                      src="/images/icons/apple.svg"
+                      src="/images/icons/app-store.svg"
                       alt="App Store"
                       width={34}
                       height={34}
-                      className="w-7 h-7 lg:w-[34px] lg:h-[34px]"
+                      className="w-7 h-7 lg:w-[34px] lg:h-[34px] dark:hidden"
+                    />
+                    <Image
+                      src="/images/icons/app-store-white.webp"
+                      alt="App Store"
+                      width={34}
+                      height={34}
+                      className="w-7 h-7 lg:w-[34px] lg:h-[34px] hidden dark:block"
                     />
                     <p className="font-light tracking-wide flex flex-col text-left">
                       Download on the

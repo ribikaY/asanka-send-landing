@@ -121,7 +121,7 @@ function WhereItWorks() {
               alt="CA"
               width={80}
               height={80}
-              className="w-full h-full object-cover rounded-full border-2 lg:border-4 border-white"
+              className="w-full h-full object-cover rounded-full border-2 lg:border-4 border-white dark:border-black"
             />
           </motion.div>
           <motion.div
@@ -133,7 +133,7 @@ function WhereItWorks() {
               alt="UM"
               width={80}
               height={80}
-              className="w-full h-full object-cover rounded-full border-2 lg:border-4 border-white"
+              className="w-full h-full object-cover rounded-full border-2 lg:border-4 border-white dark:border-black"
             />
           </motion.div>
           <motion.div
@@ -145,7 +145,7 @@ function WhereItWorks() {
               alt="EU"
               width={80}
               height={80}
-              className="w-full h-full object-cover rounded-full border-2 lg:border-4 border-white"
+              className="w-full h-full object-cover rounded-full border-2 lg:border-4 border-white dark:border-black"
             />
           </motion.div>
           <motion.div
@@ -157,7 +157,7 @@ function WhereItWorks() {
               alt="AE"
               width={80}
               height={80}
-              className="w-full h-full object-cover rounded-full border-2 lg:border-4 border-white"
+              className="w-full h-full object-cover rounded-full border-2 lg:border-4 border-white dark:border-black"
             />
           </motion.div>
         </motion.div>

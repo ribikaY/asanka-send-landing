@@ -41,12 +41,12 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <div className="rounded-full bg-asanka-primary p-1.5 group-data-[state=open]:hidden">
-          <Plus size={18} className="text-white" />
+        <div className="rounded-full bg-asanka-primary dark:bg-asanka-accent-muted/60 dark:hover:bg-asanka-accent-muted/80 p-1.5 group-data-[state=open]:hidden transition-colors">
+          <Plus size={18} className="text-white dark:text-foreground" />
         </div>
 
-        <div className="rounded-full bg-asanka-primary p-1.5 group-data-[state=closed]:hidden">
-          <Minus size={18} className="text-white" />
+        <div className="rounded-full bg-asanka-primary dark:bg-asanka-accent-muted/60 dark:hover:bg-asanka-accent-muted/80 p-1.5 group-data-[state=closed]:hidden transition-colors">
+          <Minus size={18} className="text-white dark:text-foreground" />
         </div>
 
         {/* <ChevronDownIcon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" /> */}

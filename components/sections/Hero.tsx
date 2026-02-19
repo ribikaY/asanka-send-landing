@@ -152,7 +152,7 @@ function Hero() {
                         className="font-light text-[40px] sm:text-5xl md:text-6xl leading-12 sm:leading-13 md:leading-16 xl:leading-14"
                         variants={textItemVariants}
                     >
-                        Manage Money Back Home From <span className="font-heading font-extrabold text-[#1B814B] md:leading-snug">One App</span>
+                        Manage Money Back Home From <span className="font-heading font-extrabold text-[#1B814B] dark:text-[#52A055] md:leading-snug">One App</span>
                     </motion.h1>
                     <motion.p
                         className="font-light text-foreground/80 leading-relaxed 2xl:max-w-xl mb-5 lg:mb-0 text-[15px] sm:text-base"
@@ -202,7 +202,7 @@ function Hero() {
                         />
 
                         <motion.div
-                            className="backdrop-blur-md bg-white/50 dark:bg-black/50 px-4 py-2 md:px-8 md:py-3 border border-white/80 rounded-full absolute top-[16%] left-[25%] md:left-[30%] shadow-xs"
+                            className="backdrop-blur-md bg-white/50 dark:bg-black/35 px-4 py-2 md:px-8 md:py-3 border border-white/80 dark:border-white/25 rounded-full absolute top-[16%] left-[25%] md:left-[30%] shadow-xs"
                             initial="hidden"
                             variants={getBubbleVariants(0)}
                             animate={isMounted ? {
@@ -248,11 +248,11 @@ function Hero() {
                                 },
                             }}
                         >
-                            <p className="text-[#084B27] italic text-xs md:text-[19px] whitespace-nowrap">Send money</p>
+                            <p className="text-[#084B27] dark:text-[#aad3ac] italic text-xs md:text-[19px] whitespace-nowrap">Send money</p>
                         </motion.div>
 
                         <motion.div
-                            className="backdrop-blur-md bg-white/60 dark:bg-black/50 px-4 py-2 md:px-8 md:py-3 border border-white/80 rounded-full absolute top-[35%] right-0 md:top-[33%] md:right-[11%] shadow-xs"
+                            className="backdrop-blur-md bg-white/60 dark:bg-black/50 px-4 py-2 md:px-8 md:py-3 border border-white/80 dark:border-white/25 rounded-full absolute top-[35%] right-0 md:top-[33%] md:right-[11%] shadow-xs"
                             initial="hidden"
                             variants={getBubbleVariants(1)}
                             animate={isMounted ? {
@@ -298,11 +298,11 @@ function Hero() {
                                 },
                             }}
                         >
-                            <p className="text-[#084B27] italic text-xs md:text-[19px] whitespace-nowrap">Pay bills directly</p>
+                            <p className="text-[#084B27] dark:text-[#aad3ac] italic text-xs md:text-[19px] whitespace-nowrap">Pay bills directly</p>
                         </motion.div>
 
                         <motion.div
-                            className="backdrop-blur-xl bg-white/55 md:bg-white/50 dark:bg-black/50 px-4 py-2 md:px-8 md:py-3.5 border border-white/40 rounded-full absolute top-[53%] left-[8%] md:top-auto md:bottom-[43%] md:left-[20%] shadow-xs"
+                            className="backdrop-blur-xl bg-white/55 md:bg-white/50 dark:bg-black/35 px-4 py-2 md:px-8 md:py-3.5 border border-white/40 dark:border-white/20 rounded-full absolute top-[53%] left-[8%] md:top-auto md:bottom-[43%] md:left-[20%] shadow-xs"
                             initial="hidden"
                             variants={getBubbleVariants(2)}
                             animate={isMounted ? {
@@ -348,7 +348,7 @@ function Hero() {
                                 },
                             }}
                         >
-                            <p className="text-[#084B27] italic text-xs md:text-[19px] whitespace-nowrap">Save and invest back home</p>
+                            <p className="text-[#084B27] dark:text-[#aad3ac] italic text-xs md:text-[19px] whitespace-nowrap">Save and invest back home</p>
                         </motion.div>
                     </div>
                 </motion.div>

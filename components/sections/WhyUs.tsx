@@ -77,7 +77,7 @@ function WhyUs() {
           variants={textVariants}
         >
           <motion.h1
-            className="text-3xl md:text-5xl lg:text-[65px] font-heading font-extrabold text-asanka-foreground leading-[1.1] lg:leading-[1.05]"
+            className="text-3xl md:text-5xl lg:text-[65px] font-heading font-extrabold text-asanka-foreground leading-[1.1] lg:leading-[1.05] text"
             variants={textItemVariants}
           >
             What Makes <br />Asanka Send Different
@@ -105,7 +105,7 @@ function WhyUs() {
               variants={getCardVariants('top-left')}
               className="w-1/2 flex md:block"
             >
-              <Card className="bg-asanka-card-bg1 shadow-none w-full h-full md:h-auto border-none gap-0 justify-between flex flex-col">
+              <Card className="bg-asanka-card-bg1 dark:bg-gradient-to-b dark:from-asanka-card-bg1 dark:to-[#0b0911] shadow-none w-full h-full md:h-auto border-none gap-0 justify-between flex flex-col">
                 <CardContent>
                   <div className="relative mx-auto w-full max-w-[330px] aspect-square">
                     <Image
@@ -113,11 +113,18 @@ function WhyUs() {
                       alt="Bank illustration"
                       fill
                       priority
-                      className="object-contain"
+                      className="object-contain dark:hidden"
+                    />
+                    <Image
+                      src="/images/illustrations/bank-dark.webp"
+                      alt="Bank illustration"
+                      fill
+                      priority
+                      className="object-contain hidden dark:block"
                     />
                   </div>
                 </CardContent>
-                <CardFooter className="text-sm sm:text-lg lg:text-2xl font-heading lg:font-extrabold text-[#170963] leading-4 sm:leading-tight lg:leading-6 px-3 md:px-6">
+                <CardFooter className="text-sm sm:text-lg lg:text-2xl font-heading lg:font-extrabold dark:font-bold text-[#170963] dark:text-[#6051a6] leading-4 sm:leading-tight lg:leading-6 px-3 md:px-6">
                   Explore investment <br />opportunities
                 </CardFooter>
               </Card>
@@ -130,11 +137,11 @@ function WhyUs() {
               variants={getCardVariants('top-right')}
               className="w-1/2 flex md:block"
             >
-              <Card className="bg-asanka-card-bg2 shadow-none w-full h-full md:h-auto border-none justify-between flex flex-col">
+              <Card className="bg-asanka-card-bg2 dark:bg-gradient-to-b dark:from-asanka-card-bg2 dark:to-[#050b09] shadow-none w-full h-full md:h-auto border-none justify-between flex flex-col">
                 <CardContent>
                   <div className="relative mx-auto w-full max-w-[330px] aspect-square">
                     <Image
-                      src="/images/illustrations/money.webp"
+                      src="/images/illustrations/cash.webp"
                       alt="Money illustration"
                       fill
                       priority
@@ -142,7 +149,7 @@ function WhyUs() {
                     />
                   </div>
                 </CardContent>
-                <CardFooter className="text-sm sm:text-lg lg:text-2xl font-heading lg:font-extrabold text-[#034220] leading-4 sm:leading-tight lg:leading-6 px-3 md:px-6">
+                <CardFooter className="text-sm sm:text-lg lg:text-2xl font-heading lg:font-extrabold  dark:font-bold text-[#034220] dark:text-[#367857] leading-4 sm:leading-tight lg:leading-6 px-3 md:px-6">
                   Send money instantly
                 </CardFooter>
               </Card>
@@ -157,11 +164,11 @@ function WhyUs() {
               variants={getCardVariants('bottom-left')}
               className="w-1/2 flex md:block"
             >
-              <Card className="bg-linear-to-tr from-[#e8f1fe] to-[#fff] shadow-none w-full h-full md:h-auto border-none gap-2 justify-between flex flex-col">
+              <Card className="bg-linear-to-tr from-[#e8f1fe] to-[#fff] dark:bg-gradient-to-b dark:from-[#1e293b] dark:to-[#080b11] shadow-none w-full h-full md:h-auto border-none gap-2 justify-between flex flex-col">
                 <CardContent>
                   <div className="relative mx-auto w-full max-w-[330px] aspect-square">
                     <Image
-                      src="/images/illustrations/transaction.webp"
+                      src="/images/illustrations/transactions.webp"
                       alt="Transaction illustration"
                       fill
                       priority
@@ -169,7 +176,7 @@ function WhyUs() {
                     />
                   </div>
                 </CardContent>
-                <CardFooter className="text-sm sm:text-lg lg:text-2xl font-heading lg:font-extrabold text-[#002654] leading-4 sm:leading-tight lg:leading-6 px-3 md:px-6">
+                <CardFooter className="text-sm sm:text-lg lg:text-2xl font-heading lg:font-extrabold dark:font-bold text-[#002654] dark:text-[#576983] leading-4 sm:leading-tight lg:leading-6 px-3 md:px-6">
                   Pay school fees, utilities, and airtime directly
                 </CardFooter>
               </Card>
@@ -182,19 +189,19 @@ function WhyUs() {
               variants={getCardVariants('bottom-right')}
               className="w-1/2 flex md:block"
             >
-              <Card className="bg-asanka-card-bg4 shadow-none w-full h-full md:h-auto border-none gap-2 justify-between flex flex-col">
+              <Card className="bg-asanka-card-bg4 dark:bg-gradient-to-b from-asanka-card-bg4 to-[#0f0b01] shadow-none w-full h-full md:h-auto border-none gap-2 justify-between flex flex-col">
                 <CardContent>
                   <div className="relative mx-auto w-full max-w-[330px] aspect-square">
                     <Image
-                      src="/images/illustrations/cash-store.webp"
-                      alt="Bank illustration"
+                      src="/images/illustrations/piggy-bank.webp"
+                      alt="Piggy bank illustration"
                       fill
                       priority
                       className="object-contain"
                     />
                   </div>
                 </CardContent>
-                <CardFooter className="text-sm sm:text-lg lg:text-2xl font-heading lg:font-extrabold text-[#362600] leading-4 sm:leading-tight lg:leading-6 px-3 md:px-6">
+                <CardFooter className="text-sm sm:text-lg lg:text-2xl font-heading lg:font-extrabold dark:font-bold text-[#362600] dark:text-[#887130] leading-4 sm:leading-tight lg:leading-6 px-3 md:px-6">
                   Save toward future goals back home
                 </CardFooter>
               </Card>
@@ -209,7 +216,7 @@ function WhyUs() {
         alt="Asanka Illustration"
         width={450}
         height={633}
-        className="absolute top-0 md:top-32 right-0 md:left-0 opacity-80 select-none pointer-events-none transform scale-x-[-1] scale-y-[-1] md:scale-x-[1] md:scale-y-[1] z-10 w-[300px] h-[422px] md:w-[450px] md:h-[633px]"
+        className="absolute top-0 md:top-32 right-0 md:left-0 opacity-80 dark:opacity-50 select-none pointer-events-none transform scale-x-[-1] scale-y-[-1] md:scale-x-[1] md:scale-y-[1] z-10 w-[300px] h-[422px] md:w-[450px] md:h-[633px]"
       />
 
     </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { satoshi, headingFont } from "./fonts";
 import "./globals.css";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -33,12 +34,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${satoshi.variable} ${headingFont.variable} antialiased`}
-        suppressHydrationWarning
       >
-        {children}
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
       </body>
     </html>
   );

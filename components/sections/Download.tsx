@@ -83,7 +83,7 @@ function Download() {
           Ready to Transform Your Financial Management?
         </motion.h1>
         <motion.p
-          className="font-light text-foreground/70 leading-relaxed xl:max-w-3/5 text-[15px] md:text-base"
+          className="font-light text-foreground/70 dark:text-foreground/60 leading-relaxed xl:max-w-3/5 text-[15px] md:text-base"
           variants={textItemVariants}
         >
           Experience the future of finance with our cutting-edge SaaS platform. Start optimizing your financial operations today!
@@ -115,7 +115,16 @@ function Download() {
           fill
           priority={true}
           blurDataURL="/images/mock-ups/app-transaction.webp"
-          className="object-contain"
+          className="object-contain dark:hidden"
+        />
+
+        <Image
+          src="/images/mock-ups/app-transaction-dark.webp"
+          alt="Features Illustration"
+          fill
+          priority={true}
+          blurDataURL="/images/mock-ups/app-transaction-dark.webp"
+          className="object-contain hidden dark:block"
         />
       </motion.div>
     </div>

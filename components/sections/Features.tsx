@@ -90,7 +90,7 @@ function Features() {
     <div id="features" className="container md:pt-16 flex flex-col lg:flex-row gap-2 overflow-hidden xl:overflow-visible">
       <div className="space-y-12 lg:space-y-24">
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-medium text-asanka-accent-muted leading-10 md:leading-14 md:min-w-2xl"
+          className="text-3xl md:text-4xl lg:text-5xl font-medium text-asanka-accent-muted dark:text-asanka-accent-muted/90 leading-10 md:leading-14 md:min-w-2xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -113,11 +113,11 @@ function Features() {
               variants={iconVariants}
               className="md:hidden"
             >
-              <DiamondPercent className="w-8 h-8 text-primary/80 md:text-asanka-accent" />
+              <DiamondPercent className="w-8 h-8 text-primary/80 md:text-asanka-accent dark:text-asanka-accent/60" />
             </motion.div>
 
             <motion.div
-              className="w-12 h-12 rounded-md bg-asanka-accent hidden md:flex items-center justify-center"
+              className="w-12 h-12 rounded-md bg-asanka-accent dark:bg-asanka-accent-muted/20 dark:border dark:border-asanka-accent-muted/20 hidden md:flex items-center justify-center"
               variants={iconVariants}
             >
               <Image
@@ -125,9 +125,10 @@ function Features() {
                 alt="Security Icon"
                 width={32}
                 height={32}
+                className="dark:opacity-90"
               />
             </motion.div>
-            <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium">Transparent exchange rates</p>
+            <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium dark:text-foreground/85">Transparent exchange rates</p>
           </motion.div>
           <motion.div
             className="flex gap-4 md:gap-8 items-center md:ml-4"
@@ -137,11 +138,11 @@ function Features() {
               variants={iconVariants}
               className="md:hidden"
             >
-              <BanknoteArrowUp className="w-8 h-8 text-primary/80 md:text-asanka-accent" />
+              <BanknoteArrowUp className="w-8 h-8 text-primary/80 md:text-asanka-accent dark:text-asanka-accent/60" />
             </motion.div>
 
             <motion.div
-              className="w-12 h-12 rounded-md bg-asanka-accent hidden md:flex items-center justify-center"
+              className="w-12 h-12 rounded-md bg-asanka-accent dark:bg-asanka-accent-muted/20 dark:border dark:border-asanka-accent-muted/20 hidden md:flex items-center justify-center"
               variants={iconVariants}
             >
               <Image
@@ -149,9 +150,10 @@ function Features() {
                 alt="Security Icon"
                 width={32}
                 height={32}
+                className="dark:opacity-90"
               />
             </motion.div>
-            <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium">Direct payments to services in Africa</p>
+            <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium dark:text-foreground/85">Direct payments to services in Africa</p>
           </motion.div>
           <motion.div
             className="flex gap-4 md:gap-8 items-center md:ml-8"
@@ -161,11 +163,11 @@ function Features() {
               variants={iconVariants}
               className="md:hidden"
             >
-              <ShieldCheck className="w-8 h-8 text-primary/80 md:text-asanka-accent" />
+              <ShieldCheck className="w-8 h-8 text-primary/80 md:text-asanka-accent dark:text-asanka-accent/60" />
             </motion.div>
 
             <motion.div
-              className="w-12 h-12 rounded-md bg-asanka-accent hidden md:flex items-center justify-center"
+              className="w-12 h-12 rounded-md bg-asanka-accent dark:bg-asanka-accent-muted/20 dark:border dark:border-asanka-accent-muted/20 hidden md:flex items-center justify-center"
               variants={iconVariants}
             >
               <Image
@@ -173,9 +175,10 @@ function Features() {
                 alt="Security Icon"
                 width={32}
                 height={32}
+                className="dark:opacity-90"
               />
             </motion.div>
-            <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium">Secure and compliant</p>
+            <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium dark:text-foreground/85">Secure and compliant</p>
           </motion.div>
           <motion.div
             className="flex gap-4 md:gap-8 items-center md:ml-12"
@@ -185,11 +188,11 @@ function Features() {
               variants={iconVariants}
               className="md:hidden"
             >
-              <Goal className="w-8 h-8 text-primary/80 md:text-asanka-accent" />
+              <Goal className="w-8 h-8 text-primary/80 md:text-asanka-accent dark:text-asanka-accent/60" />
             </motion.div>
 
             <motion.div
-              className="w-12 h-12 rounded-md bg-asanka-accent hidden md:flex items-center justify-center"
+              className="w-12 h-12 rounded-md bg-asanka-accent dark:bg-asanka-accent-muted/20 dark:border dark:border-asanka-accent-muted/20 hidden md:flex items-center justify-center"
               variants={iconVariants}
             >
               <Image
@@ -197,9 +200,10 @@ function Features() {
                 alt="Security Icon"
                 width={32}
                 height={32}
+                className="dark:opacity-90"
               />
             </motion.div>
-            <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium">Built for long-term financial goals</p>
+            <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium dark:text-foreground/85">Built for long-term financial goals</p>
           </motion.div>
         </motion.div>
       </div>
