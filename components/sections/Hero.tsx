@@ -142,23 +142,23 @@ function Hero() {
             <div className="container px-5 lg:px-6 flex flex-col xl:flex-row justify-between items-center xl:items-end z-10 gap-10 md:gap-0 pb-0">
                 {/* Left section */}
                 <motion.div
-                    className="self-center space-y-6 md:space-y-4 flex-1 max-w-md md:min-w-xl text-center xl:text-left pt-10 md:pt-16 xl:pt-0"
+                    className="self-center space-y-6 md:space-y-4 flex-1 max-w-md md:min-w-xl 2xl:min-w-2xl text-center xl:text-left pt-10 md:pt-16 xl:pt-0"
                     initial="hidden"
                     animate={isMounted ? "visible" : "hidden"}
                     variants={textContainerVariants}
                     suppressHydrationWarning
                 >
                     <motion.h1
-                        className="font-light text-[40px] sm:text-5xl md:text-6xl leading-12 sm:leading-13 md:leading-16 xl:leading-14"
+                        className="font-light text-[40px] sm:text-5xl md:text-6xl leading-12 sm:leading-13 md:leading-16 xl:leading-18"
                         variants={textItemVariants}
                     >
-                        Manage Money Back Home From <span className="font-heading font-extrabold text-[#1B814B] dark:text-[#52A055] md:leading-snug">One App</span>
+                        Send Money Back Home and Manage it from <span className="font-heading font-extrabold text-[#1B814B] dark:text-[#52A055] md:leading-snug">One App</span>
                     </motion.h1>
                     <motion.p
                         className="font-light text-foreground/80 leading-relaxed 2xl:max-w-xl mb-5 lg:mb-0 text-[15px] sm:text-base"
                         variants={textItemVariants}
                     >
-                        Asanka Send is a secure financial app built for immigrants who want full control over how their money supports family and builds the future back home.
+                        Asanka Send is a secure financial app built with a mother&apos;s heart and care for people who want full control over what their money does for their family and community back home
                     </motion.p>
                     <motion.div variants={buttonVariants}>
                         <Button

@@ -117,7 +117,7 @@ function HowItWorks() {
           className="text-4xl md:text-5xl text-asanka-foreground font-heading font-extrabold"
           variants={headerItemVariants}
         >
-          How It Works <span className="font-sans font-bold">(</span>Simple and Fast<span className="font-sans font-bold">)</span>
+          Here<span className="font-sans">&apos;</span>s How It Works
         </motion.h1>
         <motion.p
           className="text-muted-foreground/80 dark:text-foreground/60 leading-relaxed max-w-xl lg:mx-auto text-[15px] md:text-base"

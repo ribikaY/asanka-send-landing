@@ -80,13 +80,13 @@ function Download() {
           className="font-heading font-black text-3xl sm:text-4xl md:text-[45px] lg:text-[50px] leading-8 md:leading-14 text-asanka-foreground max-w-xl"
           variants={textItemVariants}
         >
-          Ready to Transform Your Financial Management?
+          Ready to transform how you manage your remittances?
         </motion.h1>
         <motion.p
           className="font-light text-foreground/70 dark:text-foreground/60 leading-relaxed xl:max-w-3/5 text-[15px] md:text-base"
           variants={textItemVariants}
         >
-          Experience the future of finance with our cutting-edge SaaS platform. Start optimizing your financial operations today!
+          Experience a different level of financial control with our Saas platform. Start your Asanka Send journey today!
         </motion.p>
         <motion.div variants={buttonVariants}>
           <Button

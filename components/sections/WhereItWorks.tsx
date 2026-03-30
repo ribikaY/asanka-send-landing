@@ -101,8 +101,8 @@ function WhereItWorks() {
           className="text-muted-foreground/85 font-light space-y-2 md:max-w-lg text-[15px] md:text-base"
           variants={textItemVariants}
         >
-          <p>Send from the UK, Europe, the US, Canada, and the UAE.</p>
-          <p>Support family and services across multiple African countries, with more added regularly.</p>
+          <p>Send money from the UK, Europe, the US, Canada and the UAE.</p>
+          <p>Support your family back home and access extra services across multiple African countries. Adding more soon!</p>
         </motion.div>
         <motion.div
           className="mt-4 flex py-6"

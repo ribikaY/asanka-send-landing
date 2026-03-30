@@ -96,7 +96,7 @@ function Features() {
           viewport={{ once: true, margin: "-100px" }}
           variants={headingVariants}
         >
-          Trusted by diaspora communities across the UK, Europe, the United States, Canada, and the UAE
+          Trusted by diasporan communities across the UK, Europe, the United States, Canada, and the UAE
         </motion.h2>
         <motion.div
           className="space-y-5 md:space-y-6"

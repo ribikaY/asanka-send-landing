@@ -58,8 +58,8 @@ function FAQ() {
     <div className="py-10 md:py-16 lg:py-24 dark:pb-20 lg:dark:pb-28 dark:relative">
       <div className="container rounded-lg bg-asanka-muted dark:bg-card/60 dark:border dark:border-border dark:relative dark:shadow-lg dark:shadow-black/20 dark:mb-8 dark:overflow-hidden pt-10 pb-16 md:py-16 flex flex-col lg:flex-row items-center justify-evenly gap-7 lg:gap-2">
         {/* Floating glow effects - only visible in dark theme */}
-        <div className="hidden dark:block absolute -top-8 -left-8 w-32 h-32 rounded-full bg-asanka-accent-muted/20 blur-3xl pointer-events-none"/>
-        <div className="hidden dark:block absolute -bottom-8 -right-8 w-64 h-64 rounded-full bg-asanka-accent-muted/10 blur-3xl pointer-events-none"/>
+        <div className="hidden dark:block absolute -top-8 -left-8 w-32 h-32 rounded-full bg-asanka-accent-muted/20 blur-3xl pointer-events-none" />
+        <div className="hidden dark:block absolute -bottom-8 -right-8 w-64 h-64 rounded-full bg-asanka-accent-muted/10 blur-3xl pointer-events-none" />
         <motion.div
           className="space-y-3.5 md:space-y-6 md:max-w-xl lg:max-w-md"
           initial="hidden"
@@ -68,7 +68,7 @@ function FAQ() {
           variants={textContainerVariants}
         >
           <motion.h1
-            className="font-heading font-extrabold text-3xl md:text-5xl lg:leading-16 text-asanka-foreground dark:text-asanka-foreground"
+            className="font-heading font-extrabold text-3xl md:text-5xl lg:leading-14 text-asanka-foreground dark:text-asanka-foreground"
             variants={textItemVariants}
           >
             Frequently asked questions
@@ -77,7 +77,7 @@ function FAQ() {
             className="font-light text-foreground/60 dark:text-foreground/70 leading-snug text-[15px] md:text-base"
             variants={textItemVariants}
           >
-            Choose a plan that fits your business needs and budget. No hidden fees, no surprises - just straightforward pricing for powerful financial management.
+            Find the answers to questions that people like you are asking
           </motion.p>
         </motion.div>
 

@@ -86,13 +86,13 @@ function WhyUs() {
             className="font-light text-muted-foreground leading-relaxed text-[15px] md:text-base"
             variants={textItemVariants}
           >
-            Most remittance apps stop at sending cash. <br />Asanka Send helps you decide how money is used after it arrives.
+            While most remittance apps stop at sending cash, <br/>Asanka Send helps you decide how your money will be used.
           </motion.p>
           <motion.p
             className="font-light text-muted-foreground text-[15px] md:text-base"
             variants={textItemVariants}
           >
-            All from one simple mobile app.
+            All from one simple mobile app made with a mother&apos;s heart and care
           </motion.p>
         </motion.div>
 
@@ -216,7 +216,7 @@ function WhyUs() {
         alt="Asanka Illustration"
         width={450}
         height={633}
-        className="absolute top-0 md:top-32 right-0 md:left-0 opacity-80 dark:opacity-50 select-none pointer-events-none transform scale-x-[-1] scale-y-[-1] md:scale-x-[1] md:scale-y-[1] z-10 w-[300px] h-[422px] md:w-[450px] md:h-[633px]"
+        className="absolute top-0 md:top-32 right-0 md:left-0 opacity-80 select-none pointer-events-none transform scale-x-[-1] scale-y-[-1] md:scale-x-[1] md:scale-y-[1] z-10 w-[300px] h-[422px] md:w-[450px] md:h-[633px]"
       />
 
     </div>
