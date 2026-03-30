@@ -87,163 +87,166 @@ function Features() {
   }, []);
 
   return (
-    <div id="features" className="container md:pt-16 flex flex-col lg:flex-row gap-2 overflow-hidden xl:overflow-visible">
-      <div className="space-y-12 lg:space-y-24">
-        <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-medium text-asanka-accent-muted dark:text-asanka-accent-muted/90 leading-10 md:leading-14 md:min-w-2xl"
+    <div className="">
+
+      <div id="features" className="container md:pt-16 flex flex-col lg:flex-row gap-2 overflow-hidden md:overflow-visible">
+        <div className="space-y-12 lg:space-y-24">
+          <motion.h2
+            className="text-3xl md:text-4xl lg:text-5xl font-medium text-asanka-accent-muted dark:text-asanka-accent-muted/90 leading-10 md:leading-14 md:min-w-2xl"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={headingVariants}
+          >
+            Trusted by diasporan communities across the UK, Europe, the United States, Canada, and the UAE
+          </motion.h2>
+          <motion.div
+            className="space-y-5 md:space-y-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={featureListVariants}
+          >
+            <motion.div
+              className="flex gap-4 md:gap-8 items-center"
+              variants={featureItemVariants}
+            >
+              <motion.div
+                variants={iconVariants}
+                className="md:hidden"
+              >
+                <DiamondPercent className="w-8 h-8 text-primary/80 md:text-asanka-accent dark:text-asanka-accent/60" />
+              </motion.div>
+
+              <motion.div
+                className="w-12 h-12 rounded-md bg-asanka-accent dark:bg-asanka-accent-muted/20 dark:border dark:border-asanka-accent-muted/20 hidden md:flex items-center justify-center"
+                variants={iconVariants}
+              >
+                <Image
+                  src="/images/icons/weights.svg"
+                  alt="Security Icon"
+                  width={32}
+                  height={32}
+                  className="dark:opacity-90"
+                />
+              </motion.div>
+              <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium dark:text-foreground/85">Transparent exchange rates</p>
+            </motion.div>
+            <motion.div
+              className="flex gap-4 md:gap-8 items-center md:ml-4"
+              variants={featureItemVariants}
+            >
+              <motion.div
+                variants={iconVariants}
+                className="md:hidden"
+              >
+                <BanknoteArrowUp className="w-8 h-8 text-primary/80 md:text-asanka-accent dark:text-asanka-accent/60" />
+              </motion.div>
+
+              <motion.div
+                className="w-12 h-12 rounded-md bg-asanka-accent dark:bg-asanka-accent-muted/20 dark:border dark:border-asanka-accent-muted/20 hidden md:flex items-center justify-center"
+                variants={iconVariants}
+              >
+                <Image
+                  src="/images/icons/fruit.svg"
+                  alt="Security Icon"
+                  width={32}
+                  height={32}
+                  className="dark:opacity-90"
+                />
+              </motion.div>
+              <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium dark:text-foreground/85">Direct payments to services in Africa</p>
+            </motion.div>
+            <motion.div
+              className="flex gap-4 md:gap-8 items-center md:ml-8"
+              variants={featureItemVariants}
+            >
+              <motion.div
+                variants={iconVariants}
+                className="md:hidden"
+              >
+                <ShieldCheck className="w-8 h-8 text-primary/80 md:text-asanka-accent dark:text-asanka-accent/60" />
+              </motion.div>
+
+              <motion.div
+                className="w-12 h-12 rounded-md bg-asanka-accent dark:bg-asanka-accent-muted/20 dark:border dark:border-asanka-accent-muted/20 hidden md:flex items-center justify-center"
+                variants={iconVariants}
+              >
+                <Image
+                  src="/images/icons/reload.svg"
+                  alt="Security Icon"
+                  width={32}
+                  height={32}
+                  className="dark:opacity-90"
+                />
+              </motion.div>
+              <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium dark:text-foreground/85">Secure and compliant</p>
+            </motion.div>
+            <motion.div
+              className="flex gap-4 md:gap-8 items-center md:ml-12"
+              variants={featureItemVariants}
+            >
+              <motion.div
+                variants={iconVariants}
+                className="md:hidden"
+              >
+                <Goal className="w-8 h-8 text-primary/80 md:text-asanka-accent dark:text-asanka-accent/60" />
+              </motion.div>
+
+              <motion.div
+                className="w-12 h-12 rounded-md bg-asanka-accent dark:bg-asanka-accent-muted/20 dark:border dark:border-asanka-accent-muted/20 hidden md:flex items-center justify-center"
+                variants={iconVariants}
+              >
+                <Image
+                  src="/images/icons/person.svg"
+                  alt="Security Icon"
+                  width={32}
+                  height={32}
+                  className="dark:opacity-90"
+                />
+              </motion.div>
+              <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium dark:text-foreground/85">Built for long-term financial goals</p>
+            </motion.div>
+          </motion.div>
+        </div>
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          variants={headingVariants}
+          variants={illustrationVariants}
+          className="w-full max-w-[450px] md:max-w-[600px] lg:max-w-[748px] mx-auto lg:mx-0 flex-shrink-0"
+          style={{ aspectRatio: '748/882', willChange: 'transform' }}
+          animate={isMounted ? {
+            y: [0, -12, 0],
+            scale: [1, 1.03, 1],
+          } : {}}
+          suppressHydrationWarning
+          transition={{
+            y: {
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1.3,
+            },
+            scale: {
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1.3,
+            },
+          }}
         >
-          Trusted by diasporan communities across the UK, Europe, the United States, Canada, and the UAE
-        </motion.h2>
-        <motion.div
-          className="space-y-5 md:space-y-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={featureListVariants}
-        >
-          <motion.div
-            className="flex gap-4 md:gap-8 items-center"
-            variants={featureItemVariants}
-          >
-            <motion.div
-              variants={iconVariants}
-              className="md:hidden"
-            >
-              <DiamondPercent className="w-8 h-8 text-primary/80 md:text-asanka-accent dark:text-asanka-accent/60" />
-            </motion.div>
-
-            <motion.div
-              className="w-12 h-12 rounded-md bg-asanka-accent dark:bg-asanka-accent-muted/20 dark:border dark:border-asanka-accent-muted/20 hidden md:flex items-center justify-center"
-              variants={iconVariants}
-            >
-              <Image
-                src="/images/icons/weights.svg"
-                alt="Security Icon"
-                width={32}
-                height={32}
-                className="dark:opacity-90"
-              />
-            </motion.div>
-            <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium dark:text-foreground/85">Transparent exchange rates</p>
-          </motion.div>
-          <motion.div
-            className="flex gap-4 md:gap-8 items-center md:ml-4"
-            variants={featureItemVariants}
-          >
-            <motion.div
-              variants={iconVariants}
-              className="md:hidden"
-            >
-              <BanknoteArrowUp className="w-8 h-8 text-primary/80 md:text-asanka-accent dark:text-asanka-accent/60" />
-            </motion.div>
-
-            <motion.div
-              className="w-12 h-12 rounded-md bg-asanka-accent dark:bg-asanka-accent-muted/20 dark:border dark:border-asanka-accent-muted/20 hidden md:flex items-center justify-center"
-              variants={iconVariants}
-            >
-              <Image
-                src="/images/icons/fruit.svg"
-                alt="Security Icon"
-                width={32}
-                height={32}
-                className="dark:opacity-90"
-              />
-            </motion.div>
-            <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium dark:text-foreground/85">Direct payments to services in Africa</p>
-          </motion.div>
-          <motion.div
-            className="flex gap-4 md:gap-8 items-center md:ml-8"
-            variants={featureItemVariants}
-          >
-            <motion.div
-              variants={iconVariants}
-              className="md:hidden"
-            >
-              <ShieldCheck className="w-8 h-8 text-primary/80 md:text-asanka-accent dark:text-asanka-accent/60" />
-            </motion.div>
-
-            <motion.div
-              className="w-12 h-12 rounded-md bg-asanka-accent dark:bg-asanka-accent-muted/20 dark:border dark:border-asanka-accent-muted/20 hidden md:flex items-center justify-center"
-              variants={iconVariants}
-            >
-              <Image
-                src="/images/icons/reload.svg"
-                alt="Security Icon"
-                width={32}
-                height={32}
-                className="dark:opacity-90"
-              />
-            </motion.div>
-            <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium dark:text-foreground/85">Secure and compliant</p>
-          </motion.div>
-          <motion.div
-            className="flex gap-4 md:gap-8 items-center md:ml-12"
-            variants={featureItemVariants}
-          >
-            <motion.div
-              variants={iconVariants}
-              className="md:hidden"
-            >
-              <Goal className="w-8 h-8 text-primary/80 md:text-asanka-accent dark:text-asanka-accent/60" />
-            </motion.div>
-
-            <motion.div
-              className="w-12 h-12 rounded-md bg-asanka-accent dark:bg-asanka-accent-muted/20 dark:border dark:border-asanka-accent-muted/20 hidden md:flex items-center justify-center"
-              variants={iconVariants}
-            >
-              <Image
-                src="/images/icons/person.svg"
-                alt="Security Icon"
-                width={32}
-                height={32}
-                className="dark:opacity-90"
-              />
-            </motion.div>
-            <p className="text-base md:text-xl font-light text-foreground/70 md:text-foreground md:font-medium dark:text-foreground/85">Built for long-term financial goals</p>
-          </motion.div>
+          <Image
+            src="/images/illustrations/world.svg"
+            alt="Features Illustration"
+            width={748}
+            height={882}
+            priority={true}
+            blurDataURL="/images/illustrations/world.svg"
+            className="w-full h-full object-contain"
+          />
         </motion.div>
       </div>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={illustrationVariants}
-        className="w-full max-w-[450px] md:max-w-[600px] lg:max-w-[748px] mx-auto lg:mx-0 flex-shrink-0"
-        style={{ aspectRatio: '748/882', willChange: 'transform' }}
-        animate={isMounted ? {
-          y: [0, -12, 0],
-          scale: [1, 1.03, 1],
-        } : {}}
-        suppressHydrationWarning
-        transition={{
-          y: {
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1.3,
-          },
-          scale: {
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1.3,
-          },
-        }}
-      >
-        <Image
-          src="/images/illustrations/world.svg"
-          alt="Features Illustration"
-          width={748}
-          height={882}
-          priority={true}
-          blurDataURL="/images/illustrations/world.svg"
-          className="w-full h-full object-contain"
-        />
-      </motion.div>
     </div>
   )
 }

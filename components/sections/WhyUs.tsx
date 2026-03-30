@@ -124,7 +124,7 @@ function WhyUs() {
                     />
                   </div>
                 </CardContent>
-                <CardFooter className="text-sm sm:text-lg lg:text-2xl font-heading lg:font-extrabold dark:font-bold text-[#170963] dark:text-[#6051a6] leading-4 sm:leading-tight lg:leading-6 px-3 md:px-6">
+                <CardFooter className="text-sm sm:text-lg lg:text-2xl font-heading lg:font-extrabold dark:font-bold text-[#170963] dark:text-[#4d4185] leading-4 sm:leading-tight lg:leading-6 px-3 md:px-6">
                   Explore investment <br />opportunities
                 </CardFooter>
               </Card>
@@ -201,7 +201,7 @@ function WhyUs() {
                     />
                   </div>
                 </CardContent>
-                <CardFooter className="text-sm sm:text-lg lg:text-2xl font-heading lg:font-extrabold dark:font-bold text-[#362600] dark:text-[#887130] leading-4 sm:leading-tight lg:leading-6 px-3 md:px-6">
+                <CardFooter className="text-sm sm:text-lg lg:text-2xl font-heading lg:font-extrabold dark:font-bold text-[#362600] dark:text-[#78632a] leading-4 sm:leading-tight lg:leading-6 px-3 md:px-6">
                   Save toward future goals back home
                 </CardFooter>
               </Card>
@@ -216,7 +216,7 @@ function WhyUs() {
         alt="Asanka Illustration"
         width={450}
         height={633}
-        className="absolute top-0 md:top-32 right-0 md:left-0 opacity-80 select-none pointer-events-none transform scale-x-[-1] scale-y-[-1] md:scale-x-[1] md:scale-y-[1] z-10 w-[300px] h-[422px] md:w-[450px] md:h-[633px]"
+        className="absolute top-0 md:top-32 right-0 md:left-0 opacity-80 dark:opacity-60 md:dark:opacity-40 select-none pointer-events-none transform scale-x-[-1] scale-y-[-1] md:scale-x-[1] md:scale-y-[1] z-10 w-[300px] h-[422px] md:w-[450px] md:h-[633px]"
       />
 
     </div>
