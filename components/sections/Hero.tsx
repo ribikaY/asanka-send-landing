@@ -142,7 +142,7 @@ function Hero() {
             <div className="container px-5 lg:px-6 flex flex-col xl:flex-row justify-between items-center xl:items-end z-10 gap-10 md:gap-0 pb-0">
                 {/* Left section */}
                 <motion.div
-                    className="self-center space-y-6 md:space-y-4 flex-1 sm:max-w-xl lg:max-w-2xl xl:min-w-[550px] 2xl:min-w-2xl text-center xl:text-left pt-10 md:pt-16 xl:pt-0"
+                    className="self-center space-y-6 md:space-y-4 flex-1 sm:max-w-xl lg:max-w-2xl xl:min-w-[550px] 2xl:min-w-2xl text-center xl:text-left pt-6 md:pt-16 xl:pt-0"
                     initial="hidden"
                     animate={isMounted ? "visible" : "hidden"}
                     variants={textContainerVariants}
