@@ -11,6 +11,8 @@ export default function FloatingOrb({ className }: FloatingOrbProps) {
   const orbRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const el = orbRef.current;
     if (!el) return;
 
@@ -18,63 +20,67 @@ export default function FloatingOrb({ className }: FloatingOrbProps) {
 
     const getProgress = () => {
       const scrollY = window.scrollY || 0;
-      const maxScroll = Math.max(1, doc.scrollHeight - window.innerHeight);
+      const innerHeight = window.innerHeight;
+      const maxScroll = Math.max(1, doc.scrollHeight - innerHeight);
       return Math.min(1, Math.max(0, scrollY / maxScroll));
     };
 
-    const reducedMotion =
-      typeof window !== "undefined" &&
-      window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    const applyGlowTransform = (progress: number) => {
+      const eased = progress * progress;
 
-    if (reducedMotion) {
-      const progress = getProgress();
-      const translateX = Math.sin(progress * Math.PI * 2) * 6;
-      const translateY = progress * -18;
-      const scale = 1.02;
+      // Slightly increased movement (still subtle)
+      const translateX = Math.sin(eased * Math.PI * 2) * 12;
+      const translateY = eased * -35;
+
+      // Slight scale variation
+      const scale = 1.02 + 0.025 * (1 - eased);
+
+      // More noticeable but controlled opacity
+      const opacity = 0.22 + 0.12 * (1 - eased);
 
       el.style.transform = `translate3d(${translateX.toFixed(
         2
       )}px, ${translateY.toFixed(2)}px, 0) scale(${scale.toFixed(3)})`;
-      el.style.opacity = "0.26";
 
-      const onScroll = () => {
-        const p = getProgress();
-        const tx = Math.sin(p * Math.PI * 2) * 6;
-        const ty = p * -18;
-        el.style.transform = `translate3d(${tx.toFixed(2)}px, ${ty.toFixed(
-          2
-        )}px, 0) scale(${scale.toFixed(3)})`;
-      };
-
-      window.addEventListener("scroll", onScroll, { passive: true });
-      return () => window.removeEventListener("scroll", onScroll);
-    }
-
-    let rafId: number | null = null;
-
-    const tick = (time: number) => {
-      const progress = getProgress();
-      const t = time / 1000;
-
-      // Gentle drift with time + scroll progress (kept intentionally small).
-      const driftX = Math.sin(progress * Math.PI * 2) * 10;
-      const driftY = progress * -26 + Math.sin(t * 0.9) * 6;
-
-      const scale = 1 + 0.04 * Math.sin((progress + t * 0.03) * Math.PI * 2);
-      const opacity =
-        0.22 + 0.05 * (1 - progress) + Math.sin(t * 0.9) * 0.02;
-
-      el.style.transform = `translate3d(${driftX.toFixed(
-        2
-      )}px, ${driftY.toFixed(2)}px, 0) scale(${scale.toFixed(3)})`;
-      el.style.opacity = `${Math.max(0, Math.min(0.35, opacity)).toFixed(3)}`;
-
-      rafId = requestAnimationFrame(tick);
+      el.style.opacity = `${Math.max(0.18, Math.min(0.35, opacity)).toFixed(
+        3
+      )}`;
     };
 
-    rafId = requestAnimationFrame(tick);
+    const reducedMotion =
+      window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+
+    if (reducedMotion) {
+      applyGlowTransform(getProgress());
+      return;
+    }
+
+    let ticking = false;
+
+    const update = () => {
+      ticking = false;
+      applyGlowTransform(getProgress());
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+
+    const handleResize = () => {
+      handleScroll();
+    };
+
+    applyGlowTransform(getProgress());
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      if (rafId) cancelAnimationFrame(rafId);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -82,7 +88,7 @@ export default function FloatingOrb({ className }: FloatingOrbProps) {
     <div
       aria-hidden="true"
       className={cn(
-        "hidden dark:block dark:md:hidden fixed top-[-90px] left-[-90px] w-[280px] h-[280px] pointer-events-none z-0",
+        "hidden dark:block dark:lg:hidden fixed top-[-90px] left-[-90px] w-[290px] h-[290px] pointer-events-none z-0",
         className
       )}
     >
@@ -90,13 +96,14 @@ export default function FloatingOrb({ className }: FloatingOrbProps) {
         ref={orbRef}
         className="w-full h-full rounded-full blur-3xl"
         style={{
+          opacity: 0.28,
+          transform: "translate3d(0px, 0px, 0) scale(1.02)",
           background:
-            "radial-gradient(circle at 35% 35%, rgba(165,214,167,0.55) 0%, rgba(165,214,167,0.25) 35%, rgba(165,214,167,0.08) 55%, rgba(165,214,167,0) 70%)",
-          filter: "saturate(1.1)",
+            "radial-gradient(circle at 40% 30%, rgba(165,214,167,0.6) 0%, rgba(165,214,167,0.3) 32%, rgba(165,214,167,0.12) 55%, rgba(165,214,167,0) 75%)",
+          filter: "saturate(1.3) brightness(1.1)",
           willChange: "transform, opacity",
         }}
       />
     </div>
   );
 }
-

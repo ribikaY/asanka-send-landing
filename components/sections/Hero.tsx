@@ -161,7 +161,7 @@ function Hero() {
                         className="font-light text-foreground/80 leading-relaxed 2xl:max-w-xl mb-5 lg:mb-0 text-[15px] sm:text-base"
                         variants={textItemVariants}
                     >
-                        Asanka Send is a secure financial app built with a mother&apos;s heart and care for people who want full control over what their money does for their family and community back home
+                        Asanka Send is a secure financial app built with a mother&apos;s heart and care for people who want full control over what their money does for their family and community back home.
                     </motion.p>
                     <motion.div variants={buttonVariants}>
                         <Button

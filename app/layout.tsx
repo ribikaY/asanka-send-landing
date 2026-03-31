@@ -9,21 +9,21 @@ export const metadata: Metadata = {
   ),
   title: "Asanka Send",
   description:
-    "Asanka Send is a secure financial app that allows you to send and receive money globally.",
+    "Asanka Send is a secure financial app built with a mother's heart and care for people who want full control over what their money does for their family and community back home.",
   icons: {
     icon: "/images/logo/logo.svg",
   },
   openGraph: {
     title: "Asanka Send",
     description:
-      "Asanka Send is a secure financial app that allows you to send and receive money globally.",
+      "Asanka Send is a secure financial app built with a mother's heart and care for people who want full control over what their money does for their family and community back home.",
     images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Asanka Send",
     description:
-      "Asanka Send is a secure financial app that allows you to send and receive money globally.",
+      "Asanka Send is a secure financial app built with a mother's heart and care for people who want full control over what their money does for their family and community back home.",
     images: ["/opengraph-image"],
   },
 };
