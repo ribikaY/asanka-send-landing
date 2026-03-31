@@ -88,7 +88,7 @@ export default function FloatingOrb({ className }: FloatingOrbProps) {
     <div
       aria-hidden="true"
       className={cn(
-        "hidden dark:block dark:lg:hidden fixed top-[-90px] left-[-90px] w-[290px] h-[290px] pointer-events-none z-0",
+        "hidden dark:block dark:lg:hidden fixed top-[-120px] left-[-90px] w-[290px] h-[290px] pointer-events-none z-0",
         className
       )}
     >
