@@ -9,17 +9,18 @@ import WhereItWorks from "@/components/sections/WhereItWorks";
 import WhyUs from "@/components/sections/WhyUs";
 
 export default function Home() {
-  return (
-      <main className="font-sans overflow-hidden relative z-10">
-          <FloatingOrb />
-          <Hero />
-          <WhyUs />
-          <Features />
-          <Download />
-          <WhereItWorks />
-          <FAQ />
-          <HowItWorks />
-          <Footer />
-      </main>
-  );
+    return (
+        <main className="font-sans overflow-hidden relative z-10">
+            <div className="bioluminescent-bg" />
+            <FloatingOrb />
+            <Hero />
+            <WhyUs />
+            <Features />
+            <Download />
+            <WhereItWorks />
+            <FAQ />
+            <HowItWorks />
+            <Footer />
+        </main>
+    );
 }
