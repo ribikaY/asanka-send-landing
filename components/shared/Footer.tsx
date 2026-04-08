@@ -46,11 +46,11 @@ function Footer() {
 
             {/* contact section */}
             <div className="space-y-4 md:space-y-6 mt-5 md:mt-0">
-               <Badge className="rounded-full bg-asanka-foreground dark:bg-[#084B27] text-white text-sm font-bold py-2.5 px-6 hover:bg-[#0a5d2f] transition-colors duration-200 shadow-sm">
+              <Badge className="rounded-full bg-asanka-foreground dark:bg-[#084B27] text-white text-sm font-bold py-2.5 px-6 hover:bg-[#0a5d2f] transition-colors duration-200 shadow-sm">
                 Contact Us
               </Badge>
               <div className="space-y-3">
-                <p className="text-sm tracking-wide text-foreground">customers@asankasend.com</p>
+                <p className="text-sm tracking-wide text-foreground">info@asankasend.com</p>
                 <p className="text-sm tracking-wide text-foreground">+ (44) 33 3303 1342</p>
                 <div className="flex gap-4">
                   <div className="w-10 h-10 bg-white dark:bg-white/80 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
@@ -95,7 +95,7 @@ function Footer() {
             className="object-contain"
           />
         </div>
-        
+
         <motion.div
           className="hidden sm:block relative w-full max-w-[1357px] mx-auto aspect-[1357/259] mt-6"
           initial="hidden"

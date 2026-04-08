@@ -1,6 +1,7 @@
 "use client";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { faqs } from "@/lib/data";
 import { motion } from "motion/react";
 
 const textContainerVariants = {
@@ -53,6 +54,8 @@ const accordionItemVariants = {
   },
 };
 
+
+
 function FAQ() {
   return (
     <div className="py-10 md:py-16 lg:py-24 dark:pb-20 lg:dark:pb-28 dark:relative">
@@ -95,69 +98,23 @@ function FAQ() {
             className="w-full space-y-4"
           // defaultValue="item-1"
           >
-            <motion.div variants={accordionItemVariants}>
-              <AccordionItem
-                value="item-1"
-                className="bg-white/45 dark:bg-[#0f160f] data-[state=open]:bg-white dark:data-[state=open]:bg-[#151e15] dark:data-[state=open]:border-border px-5 rounded-lg transition-all duration-200"
-              >
-                <AccordionTrigger className="text-[15px] md:text-base font-medium dark:text-foreground/90">
-                  What is Nicepay?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground dark:text-foreground/75 text-sm pt-2">
-                  <p className="leading-relaxed ">
-                    Nicepay is an all-in-one financial management platform designed to simplify payments, automate invoicing, track expenses in real-time, and make secure transactions for businesses of all sizes.
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
-            </motion.div>
-
-            <motion.div variants={accordionItemVariants}>
-              <AccordionItem
-                value="item-2"
-                className="bg-white/45 dark:bg-[#0f160f] data-[state=open]:bg-white dark:data-[state=open]:bg-[#151e15] dark:data-[state=open]:border-border px-5 md:py-1 rounded-lg transition-all duration-200"
-              >
-                <AccordionTrigger className="text-[15px] md:text-base font-medium dark:text-foreground/90">
-                  How does Nicepay work?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground dark:text-foreground/75 text-sm pt-2">
-                  {/* <p className="leading-relaxed">
-                    Nicepay is an all-in-one financial management platform designed to simplify payments, automate invoicing, track expenses in real-time, and make secure transactions for businesses of all sizes.
-                  </p> */}
-                </AccordionContent>
-              </AccordionItem>
-            </motion.div>
-
-            <motion.div variants={accordionItemVariants}>
-              <AccordionItem
-                value="item-3"
-                className="bg-white/45 dark:bg-[#0f160f] data-[state=open]:bg-white dark:data-[state=open]:bg-[#151e15] dark:data-[state=open]:border-border px-5 md:py-1 rounded-lg transition-all duration-200"
-              >
-                <AccordionTrigger className="text-[15px] md:text-base font-medium dark:text-foreground/90">
-                  Is Nicepay secure?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground dark:text-foreground/75 text-sm pt-2">
-                  {/* <p className="leading-relaxed">
-                    Nicepay is an all-in-one financial management platform designed to simplify payments, automate invoicing, track expenses in real-time, and make secure transactions for businesses of all sizes.
-                  </p> */}
-                </AccordionContent>
-              </AccordionItem>
-            </motion.div>
-
-            <motion.div variants={accordionItemVariants}>
-              <AccordionItem
-                value="item-4"
-                className="bg-white/45 dark:bg-[#0f160f] data-[state=open]:bg-white dark:data-[state=open]:bg-[#151e15] dark:data-[state=open]:border-border px-5 md:py-1 rounded-lg transition-all duration-200"
-              >
-                <AccordionTrigger className="text-[15px] md:text-base font-medium dark:text-foreground/90">
-                  Is Nicepay secure?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground dark:text-foreground/75 text-sm pt-2">
-                  {/* <p className="leading-relaxed">
-                    Nicepay is an all-in-one financial management platform designed to simplify payments, automate invoicing, track expenses in real-time, and make secure transactions for businesses of all sizes.
-                  </p> */}
-                </AccordionContent>
-              </AccordionItem>
-            </motion.div>
+            {
+              faqs.map((faq, index) => (
+                <motion.div variants={accordionItemVariants} key={index}>
+                  <AccordionItem
+                    value={`item-${index + 1}`}
+                    className="bg-white/45 dark:bg-[#0f160f] data-[state=open]:bg-white dark:data-[state=open]:bg-[#151e15] dark:data-[state=open]:border-border px-5 md:py-1 rounded-lg transition-all duration-200"
+                  >
+                    <AccordionTrigger className="text-[15px] md:text-base font-medium dark:text-foreground/90 leading-relaxed">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground dark:text-foreground/75 text-sm pt-2 leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                </motion.div>
+              ))
+            }
           </Accordion>
         </motion.div>
       </div>
